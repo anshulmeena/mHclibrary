@@ -1,25 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-<title>LSSI Mobile Website</title>
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="index,follow" name="robots" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
-
-<meta name="keywords" content="Howard County Library System, Howard County Public Library, Howard County, Library, County Library,iPod,iPhone,mobile,PDA, mobile website" />
-<meta name="description" content="Howard County Library System Mobile website"/>
-
-<link href="pics/startup-hclibrary.png" rel="apple-touch-startup-image" />
-<link href="pics/Hi-60x60.png" rel="Howard County Library-touch-icon" />
-<link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
-<link href="css/mozillaStyle.css" rel="stylesheet" media="screen" type="text/css" />
-<script src="javascript/functions.js" type="text/javascript"></script>
-
-</head>
-
-<body>
+<?php require_once 'header.php';?>
 <div id="topbar">
 <div id="title">Leadership</div>
 <div id="leftnav">
@@ -33,10 +12,7 @@
 <span class="graytitle">Leadership</span>
 <ul class="pageitem">
 <li class="textbox">
-<p>	At LSSI, we create an environment that brings our librarians out from behind the scenes and 
-outfront serving their customers. We work with local library boards and interest groups to develop 
-programs specific to the needs of the community. And, we carefully listen to civic managers, and 
-design thoughtful library solutions that meet growth, funding and community challenges.
+<p>	Content is coming....
 </p>
 </li>
 </ul>
@@ -76,8 +52,5 @@ brighter future for libraries fuels the opportunities we create, and betters the
 </ul>
 
 </div>
-<div id="footer">
-&copy; <?php echo date("Y");?> Library Systems &#38; Services, LLC<br />
-<a href="http://iwebkit.net">Powered by iWebKit</a></div>
-</body>
+<?php require_once 'footer.php';?>
 </html>

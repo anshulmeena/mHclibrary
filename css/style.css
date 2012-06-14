@@ -1,38 +1,33 @@
 /*iWebKit css 5.04 by Christopher Plieger*/
+/**********
+	Howard County Library System Mobile website.
+	@author Anshul Meena <anshul.meena@hclibrary.org>
+	@package Howard County Library System
+***********/
+/*<![CDATA[*/
 body {
 	position: relative;
 	margin: 0;
 	-webkit-text-size-adjust: none;
-	min-height: 416px;
+	min-height: 450px;
 	font-family: helvetica, sans-serif;
 	-webkit-background-size: 0.438em 100%;
-	-webkit-touch-callout: none
-	
-	/*iWebkit background gradient*/
-	/*
-	background: -webkit-gradient(linear, left top, right top, from(#c5ccd4),
-		color-stop(71%, #c5ccd4), color-stop(72%, #cbd2d8), to(#cbd2d8) );
-		
-	*/
-	
-	/*HCLS background gradient*/
-	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#3175ac),
-		to(#418cc6) );
-	background-color: #0066CC;
+	-webkit-touch-callout: none;
+	background-color: #418BC6;
 }
 
 .center {
 	margin: auto;
 	display: block;
-	text-align: center !important
+	text-align: center;
 }
 
 img {
-	border: 0
+	border: 0;
 }
 
 a:hover .arrow {
-	background-position: 0 -13px !important
+	background-position: 0 -13px !important;
 }
 
 @media screen and (max-width:320px) {
@@ -173,67 +168,32 @@ a:hover .arrow {
 		width: 152px
 	}
 	#tributton a {
-		width: 154px
+		width: 154px;
 	}
 	#tributton .links {
-		width: 452px
+		width: 452px;
 	}
 	#duobutton .links {
-		width: 298px
+		width: 298px;
 	}
 	#doublead {
-		width: 350px !important
+		width: 350px !important;
 	}
 	#duoselectionbuttons {
 		width: 293px;
 		height: 24px;
-		top: 4px
-	}
-	#triselectionbuttons {
-		width: 450px;
-		height: 24px;
-		top: 4px
-	}
-	#triselectionbuttons a:first-child,#duoselectionbuttons a:first-child {
-		width: 150px;
-		height: 22px;
-		line-height: 22px
-	}
-	#triselectionbuttons a {
-		width: 156px;
-		height: 22px;
-		line-height: 22px
-	}
-	#triselectionbuttons a:last-child,#duoselectionbuttons a:last-child {
-		width: 150px;
-		height: 22px;
-		line-height: 22px
+		top: 4px;
 	}
 	.searchbox form {
-		width: 432px
+		width: 432px;
 	}
 	.searchbox input[type="text"] {
-		width: 435px
+		width: 435px;
 	}
 	.bigfield input {
-		width: 455px
+		width: 455px;
 	}
 }
-
-#topbar.black {
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#858585),
-		color-stop(3%, #636363), color-stop(50%, #202020),
-		color-stop(51%, black), color-stop(97%, black), to(#262626) )
-}
-
-#topbar.transparent {
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(133, 133, 133, 0.7)
-		), color-stop(3%, rgba(99, 99, 99, 0.7) ),
-		color-stop(50%, rgba(32, 32, 32, 0.7) ),
-		color-stop(51%, rgba(0, 0, 0, 0.7) ),
-		color-stop(97%, rgba(0, 0, 0, 0.7) ), to(rgba(38, 38, 38, 0.7) ) )
-}
-
 #topbar {
 	position: relative;
 	left: 0;
@@ -242,7 +202,10 @@ a:hover .arrow {
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cdd5df),
 		color-stop(3%, #b0bccd), color-stop(50%, #889bb3),
 		color-stop(51%, #8195af), color-stop(97%, #6d84a2), to(#2d3642) );
-	margin-bottom: 13px
+	margin-bottom: 7px;
+	/* IE 10 */ background: -ms-linear-gradient(top, #889BB3, #6D84A2); 
+	/* Opera 11.10+ */ background: -o-linear-gradient(top, #889BB3, #6D84A2);
+	
 }
 
 #title {
@@ -286,15 +249,14 @@ a:hover .arrow {
 #footer a,#footer {
 	text-decoration: none;
 	font-size: 9pt;
-	color: #4C4C4C;
-	text-shadow: #FFF 0 1px 0
+	color: #FFFFFF;
 }
 
 .pageitem {
 	-webkit-border-radius: 8px;
 	background-color: #fff;
 	border: #878787 solid 1px;
-	font-size: 12pt;
+	font-size: 11pt;
 	overflow: hidden;
 	padding: 0;
 	position: relative;
@@ -534,47 +496,47 @@ fieldset {
 .pageitem li:first-child:hover,.pageitem li:first-child a,.radiobutton:first-child input,.select:first-child select,li.button:first-child input,.bigfield:first-child input
 	{
 	-webkit-border-top-left-radius: 8px;
-	-webkit-border-top-right-radius: 8px
+	-webkit-border-top-right-radius: 8px;
 }
 
 .pageitem li:last-child:hover,.pageitem li:last-child a,.radiobutton:last-child input,.select:last-child select,li.button:last-child input,.bigfield:last-child input
 	{
 	-webkit-border-bottom-left-radius: 8px;
-	-webkit-border-bottom-right-radius: 8px
+	-webkit-border-bottom-right-radius: 8px;
 }
 
 .menu:hover,.store:hover,.list #content li a:hover,.list .withimage:hover,.applist li:hover:nth-child(n),.ipodlist li:hover:nth-child(n)
 	{
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#058cf5),
-		to(#015fe6) )
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#418BC6),
+		to(#418BC6) )
 }
 
 .ipodlist li:hover:nth-child(n) .name,.ipodlist li:hover:nth-child(n) .time
 	{
-	border: 0
+	border: 0;
 }
 
 .menu a:hover .name,.store:hover .starcomment,.store:hover .name,.store:hover .comment,.list .withimage a:hover .comment
 	{
-	color: #fff
+	color: #fff;
 }
 
 .menu a:hover .comment {
-	color: #CCF
+	color: #CCF;
 }
 
 .menu a {
 	display: block;
 	height: 43px;
 	width: auto;
-	text-decoration: none
+	text-decoration: none;
 }
 
 .menu a img {
 	width: auto;
 	height: 32px;
 	margin: 5px 0 0 5px;
-	float: left
+	float: left;
 }
 
 .menu .name,.checkbox .name,.radiobutton .name {
@@ -586,7 +548,7 @@ fieldset {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-	float: left
+	float: left;
 }
 
 .menu .comment {
@@ -598,7 +560,7 @@ fieldset {
 	max-width: 75%;
 	white-space: nowrap;
 	float: right;
-	color: #324f85
+	color: #324f85;
 }
 
 .menu .arrow,.store .arrow,.musiclist .arrow,.list .arrow {
@@ -608,7 +570,7 @@ fieldset {
 	right: 10px;
 	top: 15px;
 	margin: 0 !important;
-	background: url("../images/arrow.png") 0 0 no-repeat
+	background: url("../images/arrow.png") 0 0 no-repeat;
 }
 
 .applist .arrow {
@@ -618,14 +580,14 @@ fieldset {
 	right: 10px;
 	top: 29px;
 	margin: 0 !important;
-	background: url("../images/arrow.png") 0 0 no-repeat
+	background: url("../images/arrow.png") 0 0 no-repeat;
 }
 
 .store {
 	height: 90px;
 	border-top: #878787 solid 1px;
 	overflow: hidden;
-	position: relative
+	position: relative;
 }
 
 .store a {
@@ -633,7 +595,7 @@ fieldset {
 	height: 90px;
 	display: block;
 	text-decoration: none;
-	position: absolute
+	position: absolute;
 }
 
 .store .image {
@@ -645,7 +607,7 @@ fieldset {
 	display: block;
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eff1f5),
 		to(#d6dce6) );
-	-webkit-background-size: 90px
+	-webkit-background-size: 90px;
 }
 
 .applist .image {
@@ -822,8 +784,7 @@ li:last-child.store .image,.store:last-child a {
 	font-size: 17px;
 	right: 20px;
 	left: 9px;
-	color: #4C4C4C;
-	text-shadow: #FFF 0 1px 0;
+	color: #FFFFFF;
 	padding: 1px 0 3px 8px
 }
 
@@ -1227,17 +1188,19 @@ li:last-child.store .image,.store:last-child a {
 	border-width: 0 5px;
 	-webkit-border-radius: 6px
 }
-
-input[type="checkbox"] {
+/*Howard County Library Changes 
+bigin...
+*/
+/*input[type="checkbox"] {
 	width: 94px;
 	height: 27px;
 	background: url('../images/checkbox.png');
 	-webkit-appearance: none;
 	border: 0;
 	float: right;
-	margin: 8px 4px 0 0
+	margin: 8px 4px 0 0;*/
 }
-
+/*
 input[type="checkbox"]:checked {
 	background-position: 0 27px
 }
@@ -1258,16 +1221,12 @@ input[type="radio"]:checked {
 	background: url('../images/radiobutton.png') no-repeat;
 	background-position: right center
 }
-
+*/
+/*Howard County Library Changes 
+end
+*/
 .radiobutton .name {
 	z-index: 1
-}
-
-select {
-	-webkit-appearance: none;
-	height: 100%;
-	width: 100%;
-	border: 0
 }
 
 .select select {
@@ -1359,3 +1318,5 @@ select {
 .smallfield:last-child input {
 	-webkit-border-bottom-right-radius: 8px
 }
+/*]]>*/
+

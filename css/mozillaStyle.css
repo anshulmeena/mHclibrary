@@ -1,32 +1,17 @@
-body { /* Converted 3 properties*/
-	font-size-adjust: none;
-	/* Mozilla doesnt implement repeating gradients the same way as Webkit..
-	 * Dont override the background-size property but instead do the background property only
-	 */
-	/*iWebkit Mozilla background color*/
-	/*
-	background: -moz-repeating-linear-gradient(left, #c5ccd4, #c5ccd4 0.31098em, #cbd2d8
-		0.31536em, #cbd2d8 0.438em);
-	*/	
-	
+/*********
+	Howard County Library System Mobile website stylesheet.
+
+	Mozilla Style sheet from iWebkit <http://snippetspace.com/>
+
+	modified according to the Howard County Library Website
+	@author Anshul Meena <anshul.meena@hclibrary.org>
+	@package Howard County Library System
+**********/
+/*<![CDATA[*/
+body { 	
 	/*HCLS background gradient*/
-	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#3175ac),
-		to(#418cc6) );
-	background-color: #0066CC;
+	background-color: #418BC6;
 }
-
-#topbar.black { /* Converted 1 gradient*/
-	background: -moz-linear-gradient(-90deg, #858585 0%, #636363 3%, #202020 50%, black
-		51%, black 97%, #262626 100%);
-}
-
-#topbar.transparent { /* Converted 1 gradient*/
-	background: -moz-linear-gradient(-90deg, rgba(133, 133, 133, 0.7) 0%,
-		rgba(99, 99, 99, 0.7) 3%, rgba(32, 32, 32, 0.7) 50%,
-		rgba(0, 0, 0, 0.7) 51%, rgba(0, 0, 0, 0.7) 97%, rgba(38, 38, 38, 0.7)
-		100% );
-}
-
 #topbar { /* Converted 1 gradient*/
 	background: -moz-linear-gradient(-90deg, #cdd5df 0%, #b0bccd 3%, #889bb3 50%,
 		#8195af 51%, #6d84a2 97%, #2d3642 100%);
@@ -119,7 +104,8 @@ body { /* Converted 3 properties*/
 
 .menu:hover,.store:hover,.list #content li a:hover,.list .withimage:hover,.applist li:hover:nth-child(n),.ipodlist li:hover:nth-child(n)
 	{ /*Converted 1 gradient*/
-	background: -moz-linear-gradient(-90deg, #058cf5 0%, #015fe6 100%);
+	background: -moz-linear-gradient(-90deg, #418BC6 0%, #418BC6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#418BC6', endColorstr='#418BC6');
 }
 
 .store .image { /*Converted 1 gradient and 1 background size*/
@@ -251,9 +237,9 @@ input[type="radio"] { /*Converted appearance and border radius*/
 	-moz-border-radius: 0;
 }
 
-select { /*converted appearance*/
+/*select { /*converted appearance*/
 	-moz-appearance: none;
-}
+}*/
 
 .select select { /*converted appearance*/
 	-moz-border-radius: 0;
@@ -285,3 +271,107 @@ select { /*converted appearance*/
 .smallfield:last-child input { /*converted border radius*/
 	-moz-border-radius-bottomright: 8px;
 }
+
+/*************
+	Howard County Library Sytem
+	Custom CSS properties.
+**************/
+
+#sort_by_item #sort
+{
+	margin-left: 5px;
+    width: 140px;
+}
+
+.polarislist_item{
+    border-bottom-color: #E0E0E0;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.newhot_menu_input{
+	/*color: transparent;*/
+	margin-left:0;
+	font-weight:bold;
+	font-size:17px;
+	text-align:left;
+	background: transparent;
+	border: 0px;
+	height:inherit;
+	max-width: 722px;
+	min-width: 230px;
+	height: 100%;
+}
+
+.newhot_menu_name{
+	margin: 3px 0 0 2px;
+	height:inherit;
+	width: inherit;
+
+}
+
+.menu lable:hover .name
+	{
+	color: #fff;
+}
+
+.menu lable:hover{
+	color: #CCF;
+}
+
+.menu lable {
+	display: block;
+	height: 43px;
+	width: auto;
+	text-decoration: none;
+}
+
+.menu .name{
+	margin: 11px 0 0 7px;
+	width: auto;
+	color: #000;
+	font-weight: bold;
+	font-size: 17px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	float: left;
+}
+
+.menu .arrow,.list .arrow {
+	position: absolute;
+	width: 8px !important;
+	height: 13px !important;
+	right: 10px;
+	top: 15px;
+	margin: 0 !important;
+	background: url("../images/arrow.png") 0 0 no-repeat;
+}
+
+.menu,li.button
+	{
+	position: relative;
+	list-style-type: none;
+	display: block;
+	height: 43px;
+	overflow: hidden;
+	border-top: 1px solid #878787;
+	width: auto;
+}
+
+#error-panel {
+	padding-top:12px;
+	padding-left:5px;
+	margin:5px 0px 7px 0px;
+	height: 33px;
+	text-align:left;
+	display:none;
+    background-color: #FEFCD8;
+    color: Red;
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+}
+/*]]>*/

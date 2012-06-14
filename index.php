@@ -1,32 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>HCLibrary Mobile Website </title>
-<meta content="yes" name="apple-mobile-web-app-capable" />
-<meta content="index,follow" name="robots" />
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
-
-<meta name="keywords" content="Howard County Library System, Howard County Public Library, Howard County, Library, County Library,iPod,iPhone,mobile,PDA, mobile website" />
-<meta name="description" content="Howard County Library System Mobile website"/>
-
-<link href="pics/startup-hclibrary.png" rel="apple-touch-startup-image" />
-<link href="pics/Hi-60x60.png" rel="Howard County Library-touch-icon" />
-<link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
-<link href="css/mozillaStyle.css" rel="stylesheet" media="screen" type="text/css" />
-<script src="javascript/functions.js" type="text/javascript"> </script>
-
-</head>
-<body>
+<?php 
+	require 'header.php';
+	//require('../includes/connections.php');
+	$db = NewADOConnection($config['db_type']);
+	$db->Connect($config['db_host'], $config['db_login'], $config['db_password'], $config['db_database']);
+	
+	$start_date = date("Y-m-d h:m:s");
+	$nextMonth = date("m") + 1;
+	$nextWeek = date("d") + 10;
+	$end_date = date("Y-".$nextMonth."-d h:m:s");
+	//$end_date = date("Y-m-d 23:59:59");
+	
+	$query = "Select title, body from announcements where start_date >= '$start_date' and end_date <= '$end_date'";
+	
+	$result = $db->Execute($query);
+	//var_dump($resultS);
+	$db->close();
+?>
 <ul class='pageitem'>
 	<li class="center">
-		<img alt="Howard County Library System Logo" src="images/logo-hclibrary.png"/>
+		<img alt="Howard County Library System Logo" src="images/hcls_mobile_logo.png"/>
 	</li>
 </ul>
-
 <div id="content">
 	<span class="graytitle">Welcome!</span>
 	<ul class="pageitem">
+		<? if($result->RowCount()){?>
+		<li class="menu">
+		  <a href="announcements.php">
+		  <img alt="locations" src="thumbs/info.png" />
+		  <span class="name">Announcements</span>
+		  <span class="arrow"></span>
+		  </a>
+		</li>		
+		<? } ?> 
 		<li class="menu">
 		  <a href="locations-hours.php">
 		  <img alt="locations" src="thumbs/locations-n-hours.png" />
@@ -44,16 +50,16 @@
 		</li>
 
 		<li class="menu">
-		  <a href="http://pactrain.hclibrary.org/mobile/Search">
-		  <img alt="catalog" src="thumbs/card-catalog-02.jpg" />
+		  <a href="https://polaris.hclibrary.org/mobile/Search">
+		  <img alt="catalog" src="thumbs/mobile_search.png" />
 		  <span class="name">Search the Catalog </span>
 		  <span class="arrow"> </span>
 		  </a>
 		</li>
 
 		<li class="menu">
-		  <a href="http://pactrain.hclibrary.org/Mobile/MyAccount/Logon">
-		  <img alt="account" src="thumbs/header_account.png" />
+		  <a href="https://polaris.hclibrary.org/Mobile/MyAccount/Logon">
+		  <img alt="account" src="thumbs/acountlogin.png" />
 		  <span class="name">My Account </span>
 		  <span class="arrow"> </span>
 		  </a>
@@ -62,18 +68,11 @@
 		<li class="menu">
 		  <a href="social.php">
 		  <img alt="social" src="thumbs/social.png" />
-		  <span class="name">Social Networking </span>
+		  <span class="name">Social Networks </span>
 		  <span class="arrow"> </span>
 		  </a>
 		</li>
-		
-		<li class="menu">
-		  <a href="support-us.php">
-		  <img alt="support" src="thumbs/support-us.png" />
-		  <span class="name">Support Us</span>
-		  <span class="arrow"></span>
-		  </a>
-		</li>
+
 		<li class="menu">
 		  <a href="contact-us.php">
 		  <img alt="support" src="thumbs/contact.png" />
@@ -82,12 +81,6 @@
 		  </a>
 		</li>
 	</ul>
-
 </div>
-<div id="footer">
-	&copy; <?php echo date("Y");?> Howard County Library System<br />
-	<a href="http://iwebkit.net">Powered by iWebKit</a>
-</div>
-</body>
-
+<?php require 'footer.php';?>
 </html>
