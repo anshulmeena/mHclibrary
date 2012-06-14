@@ -15,12 +15,12 @@
 	<meta name="keywords" content="Howard County Library System, Howard County Public Library, Howard County, Library, County Library,iPod,iPhone,mobile,PDA, mobile website" />
 	<meta name="description" content="Howard County Library System Mobile website"/>
 
-	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon.png"/>
-	<link href="apple-touch-icon.png" rel="Howard County Library-touch-icon" />
-	<link href="css/style.css" rel="stylesheet" media="screen" type="text/css" />
-	<link href="css/mozillaStyle.css" rel="stylesheet" media="screen" type="text/css" />
+	<link rel="apple-touch-icon" sizes="57x57" href="mHclibrary/apple-touch-icon.png"/>
+	<link href="../mHclibrary/apple-touch-icon.png" rel="Howard County Library-touch-icon" />
+	<link href="../mHclibrary/css/style.css" rel="stylesheet" media="screen" type="text/css" />
+	<link href="../mHclibrary/css/mozillaStyle.css" rel="stylesheet" media="screen" type="text/css" />
 
-	<script src="javascript/functions.js" type="text/javascript"> </script>
+	<script src="../mHclibrary/javascript/functions.js" type="text/javascript"> </script>
 
 </head>
 <body>

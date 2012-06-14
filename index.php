@@ -1,8 +1,8 @@
 <?php 
-	require 'header.php';
+	require '../mHclibrary/header.php';
 	//require('../includes/connections.php');
-	$db = NewADOConnection($config['db_type']);
-	$db->Connect($config['db_host'], $config['db_login'], $config['db_password'], $config['db_database']);
+	//$db = NewADOConnection($config['db_type']);
+	//$db->Connect($config['db_host'], $config['db_login'], $config['db_password'], $config['db_database']);
 	
 	$start_date = date("Y-m-d h:m:s");
 	$nextMonth = date("m") + 1;
@@ -11,10 +11,10 @@
 	//$end_date = date("Y-m-d 23:59:59");
 	
 	$query = "Select title, body from announcements where start_date >= '$start_date' and end_date <= '$end_date'";
-	
-	$result = $db->Execute($query);
+	$result = 1;
+	//$result = $db->Execute($query);
 	//var_dump($resultS);
-	$db->close();
+	//$db->close();
 ?>
 <ul class='pageitem'>
 	<li class="center">
@@ -24,7 +24,7 @@
 <div id="content">
 	<span class="graytitle">Welcome!</span>
 	<ul class="pageitem">
-		<? if($result->RowCount()){?>
+		<? if(!$result){?>
 		<li class="menu">
 		  <a href="announcements.php">
 		  <img alt="locations" src="thumbs/info.png" />
@@ -56,6 +56,14 @@
 		  <span class="arrow"> </span>
 		  </a>
 		</li>
+		
+		<li class="menu">
+		  <a href="choose-branch.php">
+		  <img alt="locations" src="thumbs/locations-n-hours.png" />
+		  <span class="name">Classes &#38; Events</span>
+		  <span class="arrow"></span>
+		  </a>
+		</li>
 
 		<li class="menu">
 		  <a href="https://polaris.hclibrary.org/Mobile/MyAccount/Logon">
@@ -82,5 +90,5 @@
 		</li>
 	</ul>
 </div>
-<?php require 'footer.php';?>
+<?php require '../mHclibrary/footer.php';?>
 </html>

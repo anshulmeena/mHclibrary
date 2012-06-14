@@ -1,7 +1,9 @@
-<?php require_once 'header.php';?>
+<?php 
+require_once '../mHclibrary/header.php';
+?>
 <div id="topbar">
   <div id="title">
-  	Locations &#38; Hours</div>
+  	Classes &#38; Events</div>
   <div id="leftnav">
     <a href="index.php">
     	<img alt="Howard County Library System mobile home" src="images/home.png"/>
@@ -14,49 +16,42 @@
 <ul class="pageitem">
 
 <li class="menu">
-  <a href="administration.php">
-  <span class="name">Administrative Offices </span>
-  <span class="arrow"/> 
-  </a>
-</li>
-
-<li class="menu">
-  <a href="central.php">
+  <a href="event-category.php?branch=Central">
   <span class="name">Central </span>
   <span class="arrow"/> 
   </a>
 </li>
 
 <li class="menu">
-  <a href="east-columbia.php">
+  <a href="event-category.php?branch=East Columbia">
   <span class="name">East Columbia </span>
   <span class="arrow"/> 
   </a>
 </li>
 
 <li class="menu">
-  <a href="elkridge.php">
+  <a href="event-category.php?branch=Elkridge">
   <span class="name">Elkridge </span>
   <span class="arrow"/> 
   </a>
 </li>
 
 <li class="menu">
-  <a href="glenwood.php">
+  <a href="event-category.php?branch=Glenwood">
   <span class="name">Glenwood </span>
   <span class="arrow"/> 
   </a>
 </li>
 
 <li class="menu">
-  <a href="miller.php">
+  <a href="event-category.php?branch=Miller">
   <span class="name">Miller </span>
   <span class="arrow"/>
   </a>
 </li>
 
 <li class="menu">
-  <a href="savage.php">
+  <a href="event-category.php?branch=Savage">
   <span class="name">Savage </span>
   <span class="arrow"/>
   </a>
@@ -65,5 +60,5 @@
 </ul>
 
 </div>
-<?php require_once 'footer.php';?>
+<?php require_once '../mHclibrary/footer.php';?>
 </html>
