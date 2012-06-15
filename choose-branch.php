@@ -16,6 +16,13 @@ require_once '../mHclibrary/header.php';
 <ul class="pageitem">
 
 <li class="menu">
+  <a href="search-events.php">
+  <span class="name">Search by Branch </span>
+  <span class="arrow"></span> 
+  </a>
+</li>
+
+<li class="menu">
   <a href="event-category.php?branch=Central">
   <span class="name">Central </span>
   <span class="arrow"/> 

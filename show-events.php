@@ -23,7 +23,7 @@ $xml = simplexml_load_file(getEvancedXML("All",1,"exml",7,$et,"All",$start_date)
     </a>
   </div>
   <div id="rightnav">
-    <a href="choose-branch.php">Back</a>
+    <a href="event-category.php?branch=<?php echo$lib?>">Back</a>
   </div>
 </div>
 
@@ -47,7 +47,12 @@ foreach ($xml->item as $item){
 if ($count == 0){
 ?>
 <li class="textbox">
-	No Events fount for this day.
+	No Events found.
+</li>	
+<?php }else if ($count/2 == 0 && $count == 0){
+?>
+<li class="textbox">
+	No Events found.
 </li>	
 <?php }
 ?>

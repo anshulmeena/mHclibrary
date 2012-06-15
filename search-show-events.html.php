@@ -4,6 +4,20 @@ require_once '../mHclibrary/header.php';
 $lib = $_GET["lib"];
 $title = $_GET["title"];
 
+if (empty($title) || empty($lib)) {
+	$message = "Please fill all the required filed.";
+	header("Location: search-events.php?message=$message");
+}
+
+$branch = "";
+
+if ($lib == "All"){
+	$lib = "Central East Columbia Elkridge Glenwood Miller Savage";
+	$branch = "All";
+}else {
+	$branch = $lib;
+}
+
 $start_date = date("m/d/Y");
 $xml = simplexml_load_file(getEvancedXML("All",1,"exml",7,"","All",$start_date));
 
@@ -17,20 +31,20 @@ $xml = simplexml_load_file(getEvancedXML("All",1,"exml",7,"","All",$start_date))
     </a>
   </div>
   <div id="rightnav">
-    <a href="choose-branch.php">Back</a>
+    <a href="search-events.php">Back</a>
   </div>
 </div>
 
 <div id="content">
-	<span class="graytitle"><?php echo$lib; ?> branch</span>
+	<span class="graytitle"><?php echo$branch; ?> branch</span>
 <ul class="pageitem">
 
 
 
 <?php 
 foreach ($xml->item as $item){
-	if ($item->library == $lib){ 
-		if ($item->title == $title){
+	if (strpos($item->library, $lib) === 0){ 
+		if ((strpos($item->title, $title) === 0) || (strpos($item->eventtypes, $title) === 0) || (strpos($item->eventtype1, $title) === 0)){
 ?>
 <li class="textbox">
 	<b><?php echo $item->title;?></b><br />
